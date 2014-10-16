@@ -1,0 +1,21 @@
+{
+  "name": "solve/datatools",
+  "type": "library",
+  "description": " - [ DataTools ] Data processing and validation",
+  "keywords": ["data-tools","validator","processing"],
+  "homepage": "http://github.com/Solve/DataTools",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexandr Viniychuk",
+      "email": "alexandr.viniychuk@icloud.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "autoload": {
+    "psr-0": { "Solve\\DataTools\\": "" }
+  },
+  "target-dir": "Solve/DataTools"
+}
