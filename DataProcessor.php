@@ -133,7 +133,7 @@ class DataProcessor {
                 if ($validationResult === true) {
                     continue;
                 } elseif ($validationResult === false) {
-                    $errorMessage = !empty($ruleParams['error_message']) ? $ruleParams['error_message'] : 'Error in field ' . $fieldName . ' - ' . $ruleName;
+                    $errorMessage = !empty($ruleParams['error']) ? $ruleParams['error'] : 'Error in field ' . $fieldName . ' - ' . $ruleName;
                     $this->addError($fieldName, $errorMessage);
                 }
 
@@ -158,8 +158,8 @@ class DataProcessor {
         return $this;
     }
 
-    public function getErrors() {
-        return $this->_validationErrors;
+    public function getErrors($fieldName = null) {
+        return $fieldName ? (!empty($this->_validationErrors[$fieldName]) ? $this->_validationErrors[$fieldName] : null) : $this->_validationErrors;
     }
 
     public function clearErrors() {
